@@ -41,6 +41,11 @@ yarn-error.log
 testem.log
 /typings
 
+# e2e
+/e2e/*.map
+/e2e/protractor-cucumber-report.json
+/e2e/protractor-cucumber_report.html
+
 # System Files
 .DS_Store
 Thumbs.db
