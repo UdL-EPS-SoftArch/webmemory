@@ -11,6 +11,14 @@
         <a class="nav-link" [routerLink]="['/about']">About</a>
       </li>
       <li class="nav-item" ngbDropdown>
+        <a class="nav-link dropdown-toggle" id="playDropdown" role="button"
+           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Play</a>
+        <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
+          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/players']"><span class="fa fa-user"></span> Players</a>
+        </div>
+      </li>
+      <li class="nav-item" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="adminDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Administration</a>
         <div class="dropdown-menu" aria-labelledby="adminDropdown" ngbDropdownMenu>
