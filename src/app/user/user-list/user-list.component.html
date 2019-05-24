@@ -1,0 +1,28 @@
+<div class="row justify-content-between">
+  <div class="col mb-3">
+    <app-user-search (emitResults)="showSearchResults($event)" [users]="users"></app-user-search>
+  </div>
+  <div class="col mb-3">
+    <button id="newUserBtn" class="btn btn-success pull-right" type="button"
+            [routerLink]="['/players/new']">Create Player</button>
+    <button id="newAdminBtn" class="btn btn-success pull-right mr-1" type="button"
+            [routerLink]="['/admins/new']">Create Admin</button>
+  </div>
+</div>
+
+<div class="card mb-1" *ngFor="let user of users">
+  <div class="card-block row m-1">
+    <h4 class="card-title col-md-12 p-1"><a [routerLink]="[user.uri]">{{user.username}}</a></h4>
+    <div class="col-md-4 p-1">
+      <h6 class="card-subtitle text-muted"><i class="fa fa-ghost fa-sm prefix grey-text"></i>Username</h6>
+      <p class="card-text">{{user.id}}</p>
+    </div>
+    <div class="col-md-4 p-3">
+      <h6 class="card-subtitle text-muted">Role</h6>
+      <p class="card-text">{{user.authorities[0]?.authority.split('_')[1]}}</p>
+    </div>
+    <div class="col-md-4 p-1">
+      <button type="button" class="btn m-1 btn-outline-primary pull-right" [routerLink]="[user.uri]">Details</button>
+    </div>
+  </div>
+</div>
