@@ -11,7 +11,6 @@ import { GameService } from '../game.service';
 })
 export class GameDetailComponent implements OnInit {
 
-  private id: Int32Array;
   public game: Game = new Game();
 
   constructor(private router: Router,
@@ -19,8 +18,8 @@ export class GameDetailComponent implements OnInit {
     private gameService: GameService) { }
 
     ngOnInit() {
-      this.id = this.route.snapshot.params.id; // CHECK IF THIS IS CORRECT
-      this.gameService.get(this.id).subscribe(
+    const id = this.route.snapshot.paramMap.get('id');
+          this.gameService.get(id).subscribe(
         game => this.game = game);
     }
 

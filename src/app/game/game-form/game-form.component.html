@@ -5,31 +5,31 @@
     <div class="form-group" [class.was-validated]="gameName.dirty || gameName.touched">
       <label class="control-label text-styling" for="gameName">Games Name</label>
       <input id="gameName" name="gameName" type="text" class="form-control" required
-             [(ngModel)]="game.gameName" #gamesName="ngModel">
+             [(ngModel)]="game.gameName" #gameName="ngModel">
       <div class="invalid-feedback">A games name is required</div>
     </div>
 
     <!-- reward input -->
     <div class="form-group" [class.was-validated]="reward.dirty || reward.touched">
-      <label class="control-label text-styling" for="gamesName">Cost Of Entry 💰</label>
-      <input id="reward" name="reward" type="reward" class="form-control" required
-             [(ngModel)]="games.reward" #reward="ngModel">
+      <label class="control-label text-styling" for="reward">Cost Of Entry 💰</label>
+      <input id="reward" name="reward" type="text" class="form-control" required
+             [(ngModel)]="game.reward" #reward="ngModel">
       <div class="invalid-feedback">A cost of entry is required</div>
     </div>
 
     <!-- boardSeed input -->
     <div class="form-group" [class.was-validated]="boardSeed.dirty || boardSeed.touched">
       <label class="control-label text-styling" for="boardSeed">Board Seed ⌛</label>
-      <button type="button" class="btn btn-success pull-right" style="background-color: hotpink">Generate</button><br><br>
-      <input id="boardSeed" name="boardSeed" type="boardSeed" class="form-control" required minlength="8" maxlength="256"
-             [(ngModel)]="games.boardSeed" #boardSeed="ngModel">
-      <div class="invalid-feedback">A Board Seed longer than 8 characters is required</div>
+      <button type="button" class="btn btn-success pull-right" style="background-color: hotpink" (click)="GenerateSeed()">Generate</button><br><br>
+      <input id="boardSeed" name="boardSeed" type="text" class="form-control" required minlength="54" maxlength="54"
+             [(ngModel)]="game.boardSeed" #boardSeed="ngModel">
+      <div class="invalid-feedback">A Board Seed with 24 characters is required, each seperated with a space</div>
     </div>
 
     <!-- Button -->
     <div class="form-group">
       <button id="submit" type="submit" class="btn m-1 btn-success pull-right" [disabled]="!form.form.valid">Submit</button>
-      <button id="listBtn" type="button" [routerLink]="['/gamess']" class="btn m-1 btn-outline-primary pull-right">Back</button>
+      <button id="listBtn" type="button" [routerLink]="['/games']" class="btn m-1 btn-outline-primary pull-right">Back</button>
     </div>
   </fieldset>
 </form>

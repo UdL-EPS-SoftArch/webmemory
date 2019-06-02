@@ -42,6 +42,8 @@ import { GameEditComponent } from './game/game-edit/game-edit.component';
 import { GameFormComponent } from './game/game-form/game-form.component';
 import { GameListComponent } from './game/game-list/game-list.component';
 import { GameService } from './game/game.service';
+import { HighscoreComponent } from './highscore/highscore.component';
+import { GamePlayComponent } from './game/game-play/game-play.component';
 
 
 @NgModule({
@@ -67,6 +69,8 @@ import { GameService } from './game/game.service';
     GameEditComponent,
     GameFormComponent,
     GameListComponent,
+    HighscoreComponent,
+    GamePlayComponent,
   ],
   imports: [
     BrowserModule,

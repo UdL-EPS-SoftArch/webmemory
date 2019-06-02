@@ -2,12 +2,20 @@
 
 <p class="text-styling text-right" style="font-weight: bold">Total number of games {{totalGames}}</p>
 
+<div class="row">
+  <div class="col mb-12">
+    <button id="newUserBtn text-right" class="btn btn-success pull-right" type="button"
+          [routerLink]="['/games/new']">Create New Game</button>
+  </div>
+</div>
+<hr>
+
 <div class="card mb-1" *ngFor="let game of games">
   <div class="card-block row m-1 col-12">
     <div class="card-body row align-items-center">
       <div class="col-5">
         <h6 class="card-subtitle text-muted text-styling">Game Name</h6>
-        <p class="card-text">{{game.id}}</p>
+        <p class="card-text">{{game.gameName}}</p>
       </div>
       <div class="col-5">
         <h6 class="card-subtitle text-muted text-styling">Entry Cost</h6>
@@ -15,10 +23,10 @@
       </div>
 
       <div class="col-2 text-right">
-          <button type="button" [routerLink]="[game.uri]"
+          <button type="button" [routerLink]="[game.id, 'gameplay']"
           class="btn btn-outline-primary">Join Game</button>
         <hr>
-        <button type="button" [routerLink]="[game.uri]"
+        <button type="button" [routerLink]="[game.id]"
               class="btn btn-outline-primary">Details</button>
       </div>
     </div>

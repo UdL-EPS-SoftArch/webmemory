@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <h4 class="card-title col-md-12 p-3 text-center text-styling">{{game.gameName}}</h4>
+
+    <button id="submit" type="button" class="btn m-1 btn-success pull-right" (click)="StartGame()">
+      Start Game
+    </button>
+
+  </div>
+</div>
+
+<div class="card mb-4">
+  <div class="card-block">
+    <div class="card-body row m-1">
+
+      <div class="col-md-2 p-3" *ngFor="let image of images1; index as i">
+        <a #temp [id]='i' (click)="OpenCard(temp.id, 1)"><img [src]='image' alt="CardImage" class="img-fluid img-thumbnail img-animation-hover" alt="Responsive image"></a>
+      </div>
+
+      <div class="col-md-2 p-3" *ngFor="let image of images2; index as i">
+          <a #temp [id]='i' (click)="OpenCard(temp.id, 2)"><img [src]="image" alt="CardImage" class="img-fluid img-thumbnail img-animation-hover" alt="Responsive image"></a>
+      </div>
+        
+      <div class="col-md-2 p-3" *ngFor="let image of images3; index as i">
+          <a #temp [id]='i' (click)="OpenCard(temp.id, 3)"><img [src]="image" alt="CardImage" class="img-fluid img-thumbnail img-animation-hover" alt="Responsive image"></a>
+      </div>
+
+      <div class="col-md-2 p-3" *ngFor="let image of images4; index as i">
+          <a #temp [id]='i' (click)="OpenCard(temp.id, 4)"><img [src]="image" alt="CardImage" class="img-fluid img-thumbnail img-animation-hover" alt="Responsive image"></a>
+      </div>
+
+    </div>
+  </div>
+</div>

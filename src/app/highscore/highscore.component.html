@@ -1,0 +1,20 @@
+<h1 class="text-styling text-center" style="font-weight: bold">⚜️ Highscores</h1>
+<hr>
+
+<div class="card mb-1" *ngFor="let user of users">
+  <div class="card-block row m-1 col-12">
+    <div class="card-body row align-items-center">
+      <div class="col-5">
+        <h6 class="card-subtitle text-muted text-styling">Name</h6>
+        <p class="card-text">{{user.id}}</p>
+      </div>
+
+      <div class="col-5">
+        <h6 class="card-subtitle text-muted text-styling">Score</h6>
+        <p class="card-text">{{user.highscore}}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
