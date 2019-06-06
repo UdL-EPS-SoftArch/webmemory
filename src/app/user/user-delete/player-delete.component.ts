@@ -10,7 +10,6 @@ import { User } from '../../login-basic/user';
 export class PlayerDeleteComponent implements OnInit {
   public user: User = new User();
   private id: string;
-  private type: string;
 
   constructor(private route: ActivatedRoute,
               private router: Router,

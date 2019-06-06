@@ -20,11 +20,12 @@
     <!-- boardSeed input -->
     <div class="form-group" [class.was-validated]="boardSeed.dirty || boardSeed.touched">
       <label class="control-label text-styling" for="boardSeed">Board Seed ⌛</label>
+
       <button type="button" class="btn btn-success pull-right" style="background-color: hotpink" (click)="GenerateSeed()">Generate</button><br><br>
       <input id="boardSeed" name="boardSeed" type="text" class="form-control" required minlength="54" maxlength="54"
              [(ngModel)]="game.boardSeed" #boardSeed="ngModel">
       <div class="invalid-feedback">A Board Seed with 24 characters is required, each seperated with a space</div>
-    </div>
+  	</div>
 
     <!-- Button -->
     <div class="form-group">
