@@ -44,6 +44,7 @@ import { GameListComponent } from './game/game-list/game-list.component';
 import { GameService } from './game/game.service';
 import { HighscoreComponent } from './highscore/highscore.component';
 import { GamePlayComponent } from './game/game-play/game-play.component';
+import { CountdownModule } from 'ngx-countdown';
 
 
 @NgModule({
@@ -74,6 +75,7 @@ import { GamePlayComponent } from './game/game-play/game-play.component';
   ],
   imports: [
     BrowserModule,
+    CountdownModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,

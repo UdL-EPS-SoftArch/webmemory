@@ -23,9 +23,7 @@ export class GamePlayComponent implements OnInit {
   private firstCard:number;
   private firstCardRow:number;
   private firstCardColumn:number;
-
   private gameOver:boolean;
-  
 
   constructor(private router: Router,
     private route: ActivatedRoute,

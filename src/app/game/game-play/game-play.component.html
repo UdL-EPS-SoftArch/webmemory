@@ -2,11 +2,12 @@
   <div class="row">
     <h4 class="card-title col-md-12 p-3 text-center text-styling">{{game.gameName}}</h4>
 
-    <button id="submit" type="button" class="btn m-1 btn-success pull-right" (click)="StartGame()">
+
+    <button id="submit" type="button" class="btn m-1 btn-success pull-right" (click)="cd1.begin()" (click)="StartGame()">
       Start Game
     </button>
     
-    <div id="basicUsage pull-right" class="text-styling">00:00:00</div>
+    <countdown class="text-styling" [config]="{leftTime: 90, demand: true}" #cd1 (event)="onEvent($event)"></countdown>
 
   </div>
 </div>
