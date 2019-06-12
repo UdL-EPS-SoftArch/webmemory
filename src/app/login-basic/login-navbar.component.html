@@ -1,14 +1,14 @@
 <li class="nav-item" *ngIf="isLoggedIn()" id="currentUser">
-  <a class="nav-link"><span class="fa fa-user-circle-o"></span> {{getCurrentUserName()}}</a>
+  <a class="nav-link text-styling"><span class="fa fa-user-circle-o text-styling"></span> {{getCurrentUserName()}}</a>
 </li>
 
-<li class="nav-item" *ngIf="isLoggedIn()">
-  <a class="nav-link" (click)="logout()" href="#" (click)="$event.preventDefault()">
-    <span class="fa fa-unlock"></span> Logout</a>
+<li class="nav-item text-styling" *ngIf="isLoggedIn()">
+  <a class="nav-link text-styling" (click)="logout()" href="#" (click)="$event.preventDefault()">
+    <span class="fa fa-unlock text-styling"></span> Logout</a>
 </li>
 
-<li class="nav-item" *ngIf="!isLoggedIn()">
-  <a class="nav-link" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+<li class="nav-item text-styling" *ngIf="!isLoggedIn()">
+  <a class="nav-link text-styling" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
      [routerLink]="['/login']">
-    <span class="fa fa-key"></span> Login</a>
+    <span class="fa fa-key text-styling"></span> Login</a>
 </li>

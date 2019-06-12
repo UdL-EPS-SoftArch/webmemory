@@ -10,25 +10,25 @@
       <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">
         <a class="nav-link" [routerLink]="['/about']">About</a>
       </li>
-      <li class="nav-item" ngbDropdown>
-        <a class="nav-link dropdown-toggle" id="playDropdown" role="button"
-           aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Play</a>
-        <div class="dropdown-menu" aria-labelledby="playDropdown" ngbDropdownMenu>
-          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/players']"><span class="fa fa-user"></span> Players</a>
-        </div>
-      </li>
+
+      <li class="nav-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }">
+          <a class="nav-link" [routerLink]="['/highscores']">Highscores</a>
+        </li>
+
       <li class="nav-item" ngbDropdown>
         <a class="nav-link dropdown-toggle" id="adminDropdown" role="button"
            aria-haspopup="true" aria-expanded="false" ngbDropdownToggle>Administration</a>
         <div class="dropdown-menu" aria-labelledby="adminDropdown" ngbDropdownMenu>
-          <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
-             [routerLink]="['/users']"><span class="fa fa-user"></span> Users</a>
+             <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/players']"><span class="fa fa-user"></span> Users</a>
+
+             <a class="dropdown-item" [routerLinkActive]="'active'" [routerLinkActiveOptions]="{ exact: true }"
+             [routerLink]="['/games']"><span class="fa fa-user"></span> Games</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="#">Administer other entities...</a>
         </div>
       </li>
     </ul>
-    <ul class="navbar-nav" app-login-navbar></ul>
+    <ul class="navbar-nav" style="margin-left:-200px !important" app-login-navbar></ul>
   </div>
 </nav>

@@ -20,7 +20,7 @@ export class LoginNavbarComponent implements OnInit {
   }
 
   getCurrentUserName(): string {
-    return this.authenticationService.getCurrentUser().username;
+    return this.authenticationService.getCurrentUser().id;
   }
 
   isLoggedIn(): boolean {

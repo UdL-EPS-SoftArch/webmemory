@@ -10,7 +10,6 @@ import { User } from '../../login-basic/user';
 export class PlayerDeleteComponent implements OnInit {
   public user: User = new User();
   private id: string;
-  private type: string;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -25,6 +24,10 @@ export class PlayerDeleteComponent implements OnInit {
 
   delete() {
     this.playerService.delete(this.user).subscribe(
-      () => this.router.navigate(['users']));
+      () => this.router.navigate(['players']));
+  }
+
+  ReRoute(){
+    this.router.navigate(['players']);
   }
 }

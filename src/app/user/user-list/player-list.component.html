@@ -1,20 +1,28 @@
+<app-user-list></app-user-list>
+<p class="text-styling" style="font-weight: bold">Total number of users {{totalPlayers}}</p>
+
 <div class="card mb-1" *ngFor="let player of players">
   <div class="card-block row m-1 col-12">
     <div class="card-body row align-items-center">
-      <div class="col-6 mt-1">
-        <h6 class="card-subtitle text-muted">Username</h6>
-        <p class="card-text">{{player.username}}</p>
+      <div class="col-5 mt-1">
+        <h6 class="card-subtitle text-muted text-styling">Username</h6>
+        <p class="card-text">{{player.id}}</p>
       </div>
       <div class="col-6 mt-1">
-        <h6 class="card-subtitle text-muted">E-mail</h6>
+        <h6 class="card-subtitle text-muted text-styling">E-mail</h6>
         <p class="card-text">{{player.email}}</p>
+      </div>
+
+      <div class="col-1">
+        <button type="button" [routerLink]="[player.uri]"
+              class="btn btn-outline-primary">Details</button>
       </div>
     </div>
   </div>
 </div>
 
 <ngb-pagination class="d-flex justify-content-center"
-                [(page)]="page" [pageSize]="pageSize" [collectionSize]="totalPlayers"
+                [(page)]="page" [pageSize]="5" [collectionSize]="totalPlayers"
                 (pageChange)="changePage()"></ngb-pagination>
 
 

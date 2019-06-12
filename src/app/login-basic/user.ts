@@ -9,6 +9,7 @@ export class User extends Resource {
   authorities: Authority[] = [];
   authorization = '';
   password = '';
+  highscore: Int32Array;
 
   constructor(values: object = {}) {
     super();

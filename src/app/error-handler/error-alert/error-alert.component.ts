@@ -22,7 +22,7 @@ export class ErrorAlertComponent implements OnInit {
         this.closed = false;
 
         this.ngZone.runOutsideAngular(() => {
-          this.timerId = setTimeout(() => {
+          this.timerId = window.setTimeout(() => {
             this.ngZone.run(() => {
               this.closed = true;
             });

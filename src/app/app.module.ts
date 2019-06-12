@@ -33,6 +33,20 @@ import { PlayerEditComponent } from './user/user-edit/player-edit.component';
 import { AdminEditComponent } from './user/user-edit/admin-edit.component';
 import { UserSearchComponent } from './user/user-search/user-search.component';
 
+import { AlertModule } from 'ngx-bootstrap';
+import { GameComponent } from './game/game.component';
+import { GameCreateComponent } from './game/game-create/game-create.component';
+import { GameDeleteComponent } from './game/game-delete/game-delete.component';
+import { GameDetailComponent } from './game/game-detail/game-detail.component';
+import { GameEditComponent } from './game/game-edit/game-edit.component';
+import { GameFormComponent } from './game/game-form/game-form.component';
+import { GameListComponent } from './game/game-list/game-list.component';
+import { GameService } from './game/game.service';
+import { HighscoreComponent } from './highscore/highscore.component';
+import { GamePlayComponent } from './game/game-play/game-play.component';
+import { CountdownModule } from 'ngx-countdown';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -49,9 +63,19 @@ import { UserSearchComponent } from './user/user-search/user-search.component';
     PlayerEditComponent,
     AdminEditComponent,
     UserSearchComponent,
+    GameComponent,
+    GameCreateComponent,
+    GameDeleteComponent,
+    GameDetailComponent,
+    GameEditComponent,
+    GameFormComponent,
+    GameListComponent,
+    HighscoreComponent,
+    GamePlayComponent,
   ],
   imports: [
     BrowserModule,
+    CountdownModule,
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
@@ -59,6 +83,7 @@ import { UserSearchComponent } from './user/user-search/user-search.component';
     NgbDropdownModule,
     NgbPaginationModule,
     AngularHalModule.forRoot(),
+    AlertModule.forRoot(), 
     LoginBasicModule,
     ErrorHandlerModule,
   ],
@@ -67,7 +92,7 @@ import { UserSearchComponent } from './user/user-search/user-search.component';
     { provide: HTTP_INTERCEPTORS, useClass: HttpErrorInterceptor, multi: true },
     { provide: 'ExternalConfigurationService', useClass: ExternalConfigurationService },
 
-    AuthenticationBasicService, LoggedInGuard, AdministratorGuard, AdminService, PlayerService
+    AuthenticationBasicService, LoggedInGuard, AdministratorGuard, AdminService, PlayerService, GameService
   ],
   bootstrap: [AppComponent]
 })

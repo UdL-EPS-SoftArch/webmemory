@@ -14,7 +14,6 @@ export class AdminDetailComponent implements OnInit {
               private adminService: AdminService,
               private router: Router) {
   }
-
   ngOnInit() {
     const id = this.route.snapshot.paramMap.get('id');
     this.adminService.get(id).subscribe(
